@@ -1,0 +1,13 @@
+Description=conversation_decoder_bot
+After=network.target
+
+[Service]
+Type=simple
+User=aleksandr
+WorkingDirectory=/home/aleksandr/assistant_for_everyone
+ExecStart=/home/aleksandr/conversation_decoder_bot/venv/bin/python /home/aleksandr/conversation_decoder_bot/main.py
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
